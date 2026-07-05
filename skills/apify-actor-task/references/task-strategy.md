@@ -1,4 +1,4 @@
-# Task Strategy — PLAN Mode Doctrine
+# Task Strategy - PLAN Mode Doctrine
 
 This reference is loaded by the `apify-actor-task` skill whenever the mode is **PLAN**: deciding which tasks to publish, how many, and how to name them. Read this before producing any PLAN output.
 
@@ -55,7 +55,7 @@ Derive tasks along three axes. One Actor typically yields 3–6 distinct tasks t
 
 Each intersection of axes that maps to a real search intent is a candidate task. Discard combinations where the use-case is implausible or duplicates another task.
 
-### Worked example — a Vivino wine-data scraper (`your-username/vivino-wine-data-scraper`)
+### Worked example - a Vivino wine-data scraper (`your-username/vivino-wine-data-scraper`)
 
 > Fictional Actor used only to illustrate the technique. Swap in your own Actor.
 
@@ -69,7 +69,7 @@ Key input fields: `wines`, `searchMode`, `includeTasteProfile`, `includeReviews`
 
 These three tasks show three distinct angles: bargain-hunting by region, competitive comparison by region, and data-pipeline use. Together they demonstrate the Actor's range without overlapping.
 
-### Short illustrations — other example Actors
+### Short illustrations - other example Actors
 
 **A wine-price scraper** (`your-username/wine-price-scraper`):
 - Use-case: price tracking over time for premium wines
@@ -98,7 +98,7 @@ Both titles resolve to the same task configuration. The slug stays in English (U
 
 ## PLAN output format
 
-Produce a prioritized list — highest expected organic value first. One row per candidate task.
+Produce a prioritized list - highest expected organic value first. One row per candidate task.
 
 | # | Task name (slug) | SEO title | Use-case label | Target keyword | Why it wins |
 |---|---|---|---|---|---|
@@ -133,8 +133,8 @@ There is no fixed minimum or maximum. Practical guidance:
 
 Before recommending any task for publication, confirm:
 
-- [ ] Every credential or sensitive input field has `isSecret: true` in the Actor's input schema (R6). Apify auto-masks `isSecret` fields in the public task view — the fix is always on the schema, never by hiding the field from the display list.
-- [ ] The Console Publication tab is enabled for this Actor (experimental gate — R3). If not, instruct the user to contact Apify support before proceeding.
+- [ ] Every credential or sensitive input field has `isSecret: true` in the Actor's input schema (R6). Apify auto-masks `isSecret` fields in the public task view - the fix is always on the schema, never by hiding the field from the display list.
+- [ ] The Console Publication tab is enabled for this Actor (experimental gate - R3). If not, instruct the user to contact Apify support before proceeding.
 - [ ] No internal business context appears in any title, description, or slug (R5). A plain-text brand name is allowed (R2); hyperlinks are not (no free prose body on a task landing page).
 
 ---
